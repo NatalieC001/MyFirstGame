@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface StartScreenViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundView;
 @property (strong, nonatomic) IBOutletCollection(UIView) NSArray *foregroundViews;
 

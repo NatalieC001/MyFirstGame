@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C039F4018B40F5F004C2DC7 /* UITools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C039F3F18B40F5F004C2DC7 /* UITools.m */; };
+		2C4B6AAD18B54F0E00570BC6 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B6AAC18B54F0E00570BC6 /* AboutViewController.m */; };
+		2C4B6AB118B54F6400570BC6 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B6AB018B54F6400570BC6 /* SettingsViewController.m */; };
+		2C4B6AB418B54F7400570BC6 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B6AB318B54F7400570BC6 /* GameViewController.m */; };
+		2C4B6AB718B54F8900570BC6 /* AddHighscoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B6AB618B54F8900570BC6 /* AddHighscoreViewController.m */; };
+		2C4B6ABA18B54F9E00570BC6 /* HighscoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B6AB918B54F9E00570BC6 /* HighscoreViewController.m */; };
 		2CB30DC918A8E87000609327 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB30DC818A8E87000609327 /* Foundation.framework */; };
 		2CB30DCB18A8E87100609327 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB30DCA18A8E87100609327 /* CoreGraphics.framework */; };
 		2CB30DCD18A8E87100609327 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB30DCC18A8E87100609327 /* UIKit.framework */; };
@@ -36,6 +42,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C039F3E18B40F5F004C2DC7 /* UITools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITools.h; sourceTree = "<group>"; };
+		2C039F3F18B40F5F004C2DC7 /* UITools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITools.m; sourceTree = "<group>"; };
+		2C4B6AAB18B54F0E00570BC6 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = ../AboutViewController.h; sourceTree = "<group>"; };
+		2C4B6AAC18B54F0E00570BC6 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = ../AboutViewController.m; sourceTree = "<group>"; };
+		2C4B6AAF18B54F6400570BC6 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		2C4B6AB018B54F6400570BC6 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		2C4B6AB218B54F7400570BC6 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		2C4B6AB318B54F7400570BC6 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		2C4B6AB518B54F8900570BC6 /* AddHighscoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddHighscoreViewController.h; sourceTree = "<group>"; };
+		2C4B6AB618B54F8900570BC6 /* AddHighscoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddHighscoreViewController.m; sourceTree = "<group>"; };
+		2C4B6AB818B54F9E00570BC6 /* HighscoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighscoreViewController.h; sourceTree = "<group>"; };
+		2C4B6AB918B54F9E00570BC6 /* HighscoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighscoreViewController.m; sourceTree = "<group>"; };
 		2CB30DC518A8E87000609327 /* MyFirstGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirstGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB30DC818A8E87000609327 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2CB30DCA18A8E87100609327 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,6 +101,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C4B6AAE18B54F4100570BC6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C4B6AAB18B54F0E00570BC6 /* AboutViewController.h */,
+				2C4B6AAC18B54F0E00570BC6 /* AboutViewController.m */,
+				2C4B6AB518B54F8900570BC6 /* AddHighscoreViewController.h */,
+				2C4B6AB618B54F8900570BC6 /* AddHighscoreViewController.m */,
+				2C4B6AB218B54F7400570BC6 /* GameViewController.h */,
+				2C4B6AB318B54F7400570BC6 /* GameViewController.m */,
+				2C4B6AB818B54F9E00570BC6 /* HighscoreViewController.h */,
+				2C4B6AB918B54F9E00570BC6 /* HighscoreViewController.m */,
+				2C4B6AAF18B54F6400570BC6 /* SettingsViewController.h */,
+				2C4B6AB018B54F6400570BC6 /* SettingsViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		2CB30DBC18A8E87000609327 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +151,7 @@
 		2CB30DCE18A8E87100609327 /* MyFirstGame */ = {
 			isa = PBXGroup;
 			children = (
+				2C4B6AAE18B54F4100570BC6 /* ViewController */,
 				2CB30E0318A9098700609327 /* back11.jpg */,
 				2CB30DD718A8E87100609327 /* AppDelegate.h */,
 				2CB30DD818A8E87100609327 /* AppDelegate.m */,
@@ -123,6 +159,8 @@
 				2CB30DDD18A8E87100609327 /* Main_iPad.storyboard */,
 				2CB30E0018A8EB2500609327 /* StartScreenViewController.h */,
 				2CB30E0118A8EB2500609327 /* StartScreenViewController.m */,
+				2C039F3E18B40F5F004C2DC7 /* UITools.h */,
+				2C039F3F18B40F5F004C2DC7 /* UITools.m */,
 				2CB30DE318A8E87100609327 /* Images.xcassets */,
 				2CB30DCF18A8E87100609327 /* Supporting Files */,
 			);
@@ -258,8 +296,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CB30DD918A8E87100609327 /* AppDelegate.m in Sources */,
+				2C4B6AAD18B54F0E00570BC6 /* AboutViewController.m in Sources */,
+				2C4B6AB418B54F7400570BC6 /* GameViewController.m in Sources */,
+				2C4B6ABA18B54F9E00570BC6 /* HighscoreViewController.m in Sources */,
+				2C4B6AB718B54F8900570BC6 /* AddHighscoreViewController.m in Sources */,
 				2CB30DD518A8E87100609327 /* main.m in Sources */,
+				2C4B6AB118B54F6400570BC6 /* SettingsViewController.m in Sources */,
 				2CB30E0218A8EB2500609327 /* StartScreenViewController.m in Sources */,
+				2C039F4018B40F5F004C2DC7 /* UITools.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

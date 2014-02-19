@@ -1,19 +1,19 @@
 //
-//  StartScreenViewController.m
+//  AddHighscoreViewController.m
 //  MyFirstGame
 //
-//  Created by STEFAN JOSTEN on 10.02.14.
+//  Created by STEFAN JOSTEN on 19.02.14.
 //  Copyright (c) 2014 Stefan. All rights reserved.
 //
 
-#import "StartScreenViewController.h"
+#import "AddHighscoreViewController.h"
 #import "UITools.h"
 
-@interface StartScreenViewController ()
+@interface AddHighscoreViewController ()
 
 @end
 
-@implementation StartScreenViewController
+@implementation AddHighscoreViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,10 +28,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
     [UITools assignBackgroundParallaxBehavior:self.backgroundView];
     [UITools assignForegroundParallaxBehavior:self.foregroundViews];
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,8 +37,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-
-
 
 @end
