@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7CEB1BAE-25DC-4922-9270-B74D7EC098E3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MyFirstGame</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>05A549DE-72DE-4108-8470-A2D21DDB6459</key>
+		<string>https://github.com/stfnjstn/MyFirstGame.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MyFirstGame.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>05A549DE-72DE-4108-8470-A2D21DDB6459</key>
+		<string>../..</string>
+		<key>2A497DD9-5CC4-4708-AB89-BA46768C3876</key>
+		<string>../../MyFirstGame</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/stfnjstn/MyFirstGame.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>05A549DE-72DE-4108-8470-A2D21DDB6459</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>05A549DE-72DE-4108-8470-A2D21DDB6459</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MyFirstGame</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2A497DD9-5CC4-4708-AB89-BA46768C3876</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MyFirstGame</string>
+		</dict>
+	</array>
+</dict>
+</plist>

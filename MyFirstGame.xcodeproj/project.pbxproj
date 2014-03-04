@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C039F4018B40F5F004C2DC7 /* UITools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C039F3F18B40F5F004C2DC7 /* UITools.m */; };
+		2C4AE32518C68BD900C34406 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C2B931F18C6899300AC0950 /* Default-568h@2x.png */; };
 		2C4B6AAD18B54F0E00570BC6 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B6AAC18B54F0E00570BC6 /* AboutViewController.m */; };
 		2C4B6AB118B54F6400570BC6 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B6AB018B54F6400570BC6 /* SettingsViewController.m */; };
 		2C4B6AB418B54F7400570BC6 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B6AB318B54F7400570BC6 /* GameViewController.m */; };
@@ -25,8 +26,6 @@
 		2CB30DEB18A8E87100609327 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB30DEA18A8E87100609327 /* XCTest.framework */; };
 		2CB30DEC18A8E87100609327 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB30DC818A8E87000609327 /* Foundation.framework */; };
 		2CB30DED18A8E87100609327 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB30DCC18A8E87100609327 /* UIKit.framework */; };
-		2CB30DF518A8E87100609327 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CB30DF318A8E87100609327 /* InfoPlist.strings */; };
-		2CB30DF718A8E87100609327 /* MyFirstGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB30DF618A8E87100609327 /* MyFirstGameTests.m */; };
 		2CB30E0218A8EB2500609327 /* StartScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB30E0118A8EB2500609327 /* StartScreenViewController.m */; };
 		2CB30E0418A9098700609327 /* back11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2CB30E0318A9098700609327 /* back11.jpg */; };
 /* End PBXBuildFile section */
@@ -44,6 +43,12 @@
 /* Begin PBXFileReference section */
 		2C039F3E18B40F5F004C2DC7 /* UITools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITools.h; sourceTree = "<group>"; };
 		2C039F3F18B40F5F004C2DC7 /* UITools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITools.m; sourceTree = "<group>"; };
+		2C2613E218C683D700BE857F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		2C2613E318C6841900BE857F /* SplashiPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashiPad.png; sourceTree = "<group>"; };
+		2C2613E418C6842D00BE857F /* SplashiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashiPad@2x.png"; sourceTree = "<group>"; };
+		2C2613E518C6846200BE857F /* SplashiPadLandscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashiPadLandscape.png; sourceTree = "<group>"; };
+		2C2613E618C6847600BE857F /* SplashiPadLandscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashiPadLandscape@2x.png"; sourceTree = "<group>"; };
+		2C2B931F18C6899300AC0950 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2C4B6AAB18B54F0E00570BC6 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = ../AboutViewController.h; sourceTree = "<group>"; };
 		2C4B6AAC18B54F0E00570BC6 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = ../AboutViewController.m; sourceTree = "<group>"; };
 		2C4B6AAF18B54F6400570BC6 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -69,12 +74,9 @@
 		2CB30DE318A8E87100609327 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2CB30DE918A8E87100609327 /* MyFirstGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFirstGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB30DEA18A8E87100609327 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		2CB30DF218A8E87100609327 /* MyFirstGameTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MyFirstGameTests-Info.plist"; sourceTree = "<group>"; };
-		2CB30DF418A8E87100609327 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2CB30DF618A8E87100609327 /* MyFirstGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyFirstGameTests.m; sourceTree = "<group>"; };
 		2CB30E0018A8EB2500609327 /* StartScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartScreenViewController.h; sourceTree = "<group>"; };
 		2CB30E0118A8EB2500609327 /* StartScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartScreenViewController.m; sourceTree = "<group>"; };
-		2CB30E0318A9098700609327 /* back11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back11.jpg; sourceTree = "<group>"; };
+		2CB30E0318A9098700609327 /* back11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = back11.jpg; path = MyFirstGame/back11.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C2613E718C6848D00BE857F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2C2B931F18C6899300AC0950 /* Default-568h@2x.png */,
+				2CB30E0318A9098700609327 /* back11.jpg */,
+				2C2613E218C683D700BE857F /* Default@2x.png */,
+				2C2613E618C6847600BE857F /* SplashiPadLandscape@2x.png */,
+				2C2613E518C6846200BE857F /* SplashiPadLandscape.png */,
+				2C2613E418C6842D00BE857F /* SplashiPad@2x.png */,
+				2C2613E318C6841900BE857F /* SplashiPad.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		2C4B6AAE18B54F4100570BC6 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,8 +137,8 @@
 		2CB30DBC18A8E87000609327 = {
 			isa = PBXGroup;
 			children = (
+				2C2613E718C6848D00BE857F /* Images */,
 				2CB30DCE18A8E87100609327 /* MyFirstGame */,
-				2CB30DF018A8E87100609327 /* MyFirstGameTests */,
 				2CB30DC718A8E87000609327 /* Frameworks */,
 				2CB30DC618A8E87000609327 /* Products */,
 			);
@@ -152,7 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				2C4B6AAE18B54F4100570BC6 /* ViewController */,
-				2CB30E0318A9098700609327 /* back11.jpg */,
 				2CB30DD718A8E87100609327 /* AppDelegate.h */,
 				2CB30DD818A8E87100609327 /* AppDelegate.m */,
 				2CB30DDA18A8E87100609327 /* Main_iPhone.storyboard */,
@@ -174,24 +189,6 @@
 				2CB30DD118A8E87100609327 /* InfoPlist.strings */,
 				2CB30DD418A8E87100609327 /* main.m */,
 				2CB30DD618A8E87100609327 /* MyFirstGame-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		2CB30DF018A8E87100609327 /* MyFirstGameTests */ = {
-			isa = PBXGroup;
-			children = (
-				2CB30DF618A8E87100609327 /* MyFirstGameTests.m */,
-				2CB30DF118A8E87100609327 /* Supporting Files */,
-			);
-			path = MyFirstGameTests;
-			sourceTree = "<group>";
-		};
-		2CB30DF118A8E87100609327 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				2CB30DF218A8E87100609327 /* MyFirstGameTests-Info.plist */,
-				2CB30DF318A8E87100609327 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -277,6 +274,7 @@
 				2CB30DDC18A8E87100609327 /* Main_iPhone.storyboard in Resources */,
 				2CB30DD318A8E87100609327 /* InfoPlist.strings in Resources */,
 				2CB30E0418A9098700609327 /* back11.jpg in Resources */,
+				2C4AE32518C68BD900C34406 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +282,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CB30DF518A8E87100609327 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,7 +308,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CB30DF718A8E87100609327 /* MyFirstGameTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,14 +344,6 @@
 				2CB30DDE18A8E87100609327 /* Base */,
 			);
 			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		2CB30DF318A8E87100609327 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2CB30DF418A8E87100609327 /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -439,7 +427,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyFirstGame/MyFirstGame-Prefix.pch";
 				INFOPLIST_FILE = "MyFirstGame/MyFirstGame-Info.plist";
@@ -452,7 +439,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyFirstGame/MyFirstGame-Prefix.pch";
 				INFOPLIST_FILE = "MyFirstGame/MyFirstGame-Info.plist";
