@@ -2,7 +2,7 @@
 //  GameViewController.h
 //  MyFirstGame
 //
-//  Created by STEFAN JOSTEN on 19.02.14.
+//  Created by STEFAN on 19.02.14.
 //  Copyright (c) 2014 Stefan. All rights reserved.
 //
 

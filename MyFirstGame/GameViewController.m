@@ -2,12 +2,13 @@
 //  GameViewController.m
 //  MyFirstGame
 //
-//  Created by STEFAN JOSTEN on 19.02.14.
+//  Created by STEFAN on 19.02.14.
 //  Copyright (c) 2014 Stefan. All rights reserved.
 //
 
 #import "GameViewController.h"
 #import "UITools.h"
+#import "GameScene.h"
 
 @interface GameViewController ()
 
@@ -30,6 +31,22 @@
 	// Do any additional setup after loading the view.
     [UITools assignBackgroundParallaxBehavior:self.backgroundView];
     [UITools assignForegroundParallaxBehavior:self.foregroundViews];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    SKView * skView = [[SKView alloc]initWithFrame:self.view.frame]; //(SKView *)self.view;
+    [self.view addSubview:skView];
+    skView.showsFPS = YES;
+    skView.showsNodeCount = YES;
+    
+    // Create and configure the scene.
+    GameScene *gameScene = [GameScene sceneWithSize:skView.bounds.size];
+    gameScene.scaleMode = SKSceneScaleModeResizeFill; //SKSceneScaleModeAspectFill;
+    
+    // Present the scene.
+    [skView presentScene:gameScene];
 }
 
 - (void)didReceiveMemoryWarning

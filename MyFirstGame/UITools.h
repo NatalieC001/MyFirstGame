@@ -2,7 +2,7 @@
 //  UITools.h
 //  MyFirstGame
 //
-//  Created by STEFAN JOSTEN on 18.02.14.
+//  Created by STEFAN on 18.02.14.
 //  Copyright (c) 2014 Stefan. All rights reserved.
 //
 
