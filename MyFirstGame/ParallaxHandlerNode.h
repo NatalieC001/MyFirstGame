@@ -7,6 +7,8 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "MotionManagerSingleton.h" // New
+#import <GLKit/GLKit.h> // New
 
 @interface ParallaxHandlerNode : SKNode
 

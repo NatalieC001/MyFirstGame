@@ -34,16 +34,11 @@ ParallaxHandlerNode *background;
 }
 
 // Increase speed after touch event up to 5 times.
-// After maximum speed is reached the next touch changes the scroll direction
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     if (_speed<cMaxSpeed && _speed>-cMaxSpeed) {
         _speed=_speed*2;
     } else {
-        if (_speed<0) {
-            _speed=cStartSpeed;
-        } else {
-            _speed=-cStartSpeed;
-        }
+        _speed=cStartSpeed;
     }
 }
 

@@ -8,6 +8,8 @@
 
 #import "ParallaxHandlerNode.h"
 
+#define cFactorForAngleToGetSpeed 6 // NEW
+
 @implementation ParallaxHandlerNode
 
 CGSize _containerSize;
@@ -58,6 +60,9 @@ CGSize _containerSize;
 // - Speed depends on layer to simulare deepth
 -(void)scroll:(float)speed {
     
+    GLKVector3 vMotionVector = [MotionManagerSingleton getMotionVectorWithLowPass]; //NEW
+    float dMotionFactor=vMotionVector.x*cFactorForAngleToGetSpeed; // NEW
+    
     for (int i=0; i<self.children.count;i++) {
         SKNode *node = [self.children objectAtIndex:i];
         // If more than one screen => Scrolling
@@ -65,15 +70,15 @@ CGSize _containerSize;
             
             float parallaxPos=node.position.x;
             NSLog(@"x: %f", parallaxPos);
-            if (speed>0) {
-                parallaxPos+=speed*i;
+            if (dMotionFactor>0) {
+                parallaxPos+=speed*i*dMotionFactor; //Changed
                 if (parallaxPos>=0) {
                     // switch between first and last screen
                     parallaxPos=-_containerSize.width*(node.children.count-1);
                 }
-            } else if (speed<0) {
+            } else if (dMotionFactor<0) {
                 
-                parallaxPos+=speed*i;
+                parallaxPos+=speed*i*dMotionFactor; //Changed;
                 if (parallaxPos<-_containerSize.width*(node.children.count-1)) {
                     // switch between last and first screen
                     parallaxPos=0;

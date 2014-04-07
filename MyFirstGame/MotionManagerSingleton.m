@@ -1,14 +1,15 @@
 //
 //  MotionManagerSingleton.m
-//  MyFirstGame
+//  MotionDemo
 //
-//  Created by STEFAN on 29.03.14.
+//  Created by STEFAN on 07.04.14.
 //  Copyright (c) 2014 Stefan. All rights reserved.
 //
 
+
 #import "MotionManagerSingleton.h"
 
-
+// Damping factor
 #define cLowPassFacor 0.95
 
 @implementation MotionManagerSingleton
@@ -17,20 +18,24 @@ static CMMotionManager* _motionManager;
 static CMAttitude* _referenceAttitude;
 static bool bActive;
 
+// only one instance of CMMotionManager can be used in your project.
+// => Implement as Singleton which can be used in the whole application
 +(CMMotionManager*)getMotionManager {
     if (_motionManager==nil) {
         _motionManager=[[CMMotionManager alloc]init];
         _motionManager.deviceMotionUpdateInterval=0.25;
-        bActive=true;
         [_motionManager startDeviceMotionUpdates];
+        bActive=true;
     } else if (bActive==false) {
-        bActive=true;
         [_motionManager startDeviceMotionUpdates];
+        bActive=true;
     }
     return _motionManager;
 }
 
-
+// Returns a vector with the movements
+// At the first time a reference orientation is saved to ensure the motion detection works
+// for multiple device positions
 +(GLKVector3)getMotionVectorWithLowPass{
     // Motion
     CMAttitude *attitude = self.getMotionManager.deviceMotion.attitude;
@@ -44,21 +49,22 @@ static bool bActive;
     return [self lowPassWithVector: GLKVector3Make(attitude.pitch,attitude.roll,attitude.yaw)];
 }
 
+// Stop collection motion data to save energy
 +(void)stop {
     if (_motionManager!=nil) {
         [_motionManager stopDeviceMotionUpdates];
+        _referenceAttitude=nil;
         bActive=false;
     }
 }
 
-
+// Damp the jitter caused by hand movement
 +(GLKVector3)lowPassWithVector:(GLKVector3)vector
 {
     static GLKVector3 lastVector;
     
-    
     vector.x = vector.x * cLowPassFacor + lastVector.x * (1.0 - cLowPassFacor);
-	vector.y = vector.y * cLowPassFacor + lastVector.y * (1.0 - cLowPassFacor);
+    vector.y = vector.y * cLowPassFacor + lastVector.y * (1.0 - cLowPassFacor);
     vector.z = vector.z * cLowPassFacor + lastVector.z * (1.0 - cLowPassFacor);
     
     lastVector = vector;

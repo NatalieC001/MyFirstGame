@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2C039F4018B40F5F004C2DC7 /* UITools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C039F3F18B40F5F004C2DC7 /* UITools.m */; };
+		2C1867B118F31F3700A75302 /* MotionManagerSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1867B018F31F3700A75302 /* MotionManagerSingleton.m */; };
 		2C2993C518E03C8900CE4900 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2993C418E03C8900CE4900 /* SpriteKit.framework */; };
 		2C2993C818E0472C00CE4900 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2993C718E0472C00CE4900 /* GameScene.m */; };
 		2C2993CB18E048A700CE4900 /* ParallaxHandlerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2993CA18E048A700CE4900 /* ParallaxHandlerNode.m */; };
@@ -17,7 +18,6 @@
 		2C4B6AB418B54F7400570BC6 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B6AB318B54F7400570BC6 /* GameViewController.m */; };
 		2C4B6AB718B54F8900570BC6 /* AddHighscoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B6AB618B54F8900570BC6 /* AddHighscoreViewController.m */; };
 		2C4B6ABA18B54F9E00570BC6 /* HighscoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B6AB918B54F9E00570BC6 /* HighscoreViewController.m */; };
-		2C867FFF18F0B581004464A7 /* MotionManagerSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C867FFE18F0B581004464A7 /* MotionManagerSingleton.m */; };
 		2C86800118F0B5AB004464A7 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C86800018F0B5AB004464A7 /* CoreMotion.framework */; };
 		2C86800318F0B5BA004464A7 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C86800218F0B5BA004464A7 /* GLKit.framework */; };
 		2CB30DC918A8E87000609327 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB30DC818A8E87000609327 /* Foundation.framework */; };
@@ -49,6 +49,8 @@
 /* Begin PBXFileReference section */
 		2C039F3E18B40F5F004C2DC7 /* UITools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITools.h; sourceTree = "<group>"; };
 		2C039F3F18B40F5F004C2DC7 /* UITools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITools.m; sourceTree = "<group>"; };
+		2C1867AF18F31F3700A75302 /* MotionManagerSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotionManagerSingleton.h; sourceTree = "<group>"; };
+		2C1867B018F31F3700A75302 /* MotionManagerSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionManagerSingleton.m; sourceTree = "<group>"; };
 		2C2613E218C683D700BE857F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		2C2613E318C6841900BE857F /* SplashiPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashiPad.png; sourceTree = "<group>"; };
 		2C2613E418C6842D00BE857F /* SplashiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashiPad@2x.png"; sourceTree = "<group>"; };
@@ -70,8 +72,6 @@
 		2C4B6AB618B54F8900570BC6 /* AddHighscoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddHighscoreViewController.m; sourceTree = "<group>"; };
 		2C4B6AB818B54F9E00570BC6 /* HighscoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighscoreViewController.h; sourceTree = "<group>"; };
 		2C4B6AB918B54F9E00570BC6 /* HighscoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighscoreViewController.m; sourceTree = "<group>"; };
-		2C867FFD18F0B581004464A7 /* MotionManagerSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MotionManagerSingleton.h; path = ../MotionManagerSingleton.h; sourceTree = "<group>"; };
-		2C867FFE18F0B581004464A7 /* MotionManagerSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MotionManagerSingleton.m; path = ../MotionManagerSingleton.m; sourceTree = "<group>"; };
 		2C86800018F0B5AB004464A7 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		2C86800218F0B5BA004464A7 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		2CB30DC518A8E87000609327 /* MyFirstGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyFirstGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,8 +195,8 @@
 				2CB30DD818A8E87100609327 /* AppDelegate.m */,
 				2C2993C618E0472C00CE4900 /* GameScene.h */,
 				2C2993C718E0472C00CE4900 /* GameScene.m */,
-				2C867FFD18F0B581004464A7 /* MotionManagerSingleton.h */,
-				2C867FFE18F0B581004464A7 /* MotionManagerSingleton.m */,
+				2C1867AF18F31F3700A75302 /* MotionManagerSingleton.h */,
+				2C1867B018F31F3700A75302 /* MotionManagerSingleton.m */,
 				2C2993C918E048A700CE4900 /* ParallaxHandlerNode.h */,
 				2C2993CA18E048A700CE4900 /* ParallaxHandlerNode.m */,
 				2CB30DDA18A8E87100609327 /* Main_iPhone.storyboard */,
@@ -330,7 +330,7 @@
 				2C2993CB18E048A700CE4900 /* ParallaxHandlerNode.m in Sources */,
 				2CB30E0218A8EB2500609327 /* StartScreenViewController.m in Sources */,
 				2C039F4018B40F5F004C2DC7 /* UITools.m in Sources */,
-				2C867FFF18F0B581004464A7 /* MotionManagerSingleton.m in Sources */,
+				2C1867B118F31F3700A75302 /* MotionManagerSingleton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
