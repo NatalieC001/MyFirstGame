@@ -50,7 +50,7 @@
 		2C039F3E18B40F5F004C2DC7 /* UITools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITools.h; sourceTree = "<group>"; };
 		2C039F3F18B40F5F004C2DC7 /* UITools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITools.m; sourceTree = "<group>"; };
 		2C1867B018F31F3700A75302 /* MotionManagerSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionManagerSingleton.m; sourceTree = "<group>"; };
-		2C1867B218F3230A00A75302 /* MotionManagerSingleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MotionManagerSingleton.h; sourceTree = "<group>"; };
+		2C1867B318F3239E00A75302 /* MotionManagerSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MotionManagerSingleton.h; path = ../MotionManagerSingleton.h; sourceTree = "<group>"; };
 		2C2613E218C683D700BE857F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		2C2613E318C6841900BE857F /* SplashiPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashiPad.png; sourceTree = "<group>"; };
 		2C2613E418C6842D00BE857F /* SplashiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashiPad@2x.png"; sourceTree = "<group>"; };
@@ -195,8 +195,8 @@
 				2CB30DD818A8E87100609327 /* AppDelegate.m */,
 				2C2993C618E0472C00CE4900 /* GameScene.h */,
 				2C2993C718E0472C00CE4900 /* GameScene.m */,
-				2C1867B218F3230A00A75302 /* MotionManagerSingleton.h */,
 				2C1867B018F31F3700A75302 /* MotionManagerSingleton.m */,
+				2C1867B318F3239E00A75302 /* MotionManagerSingleton.h */,
 				2C2993C918E048A700CE4900 /* ParallaxHandlerNode.h */,
 				2C2993CA18E048A700CE4900 /* ParallaxHandlerNode.m */,
 				2CB30DDA18A8E87100609327 /* Main_iPhone.storyboard */,
