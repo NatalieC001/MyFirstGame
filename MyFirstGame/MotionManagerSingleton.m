@@ -33,20 +33,25 @@ static bool bActive;
     return _motionManager;
 }
 
-// Returns a vector with the movements
-// At the first time a reference orientation is saved to ensure the motion detection works
-// for multiple device positions
+// Returns a vector with the orientation values
+// At the first time a reference orientation is saved to ensure the motion detection works for multiple device positions
 +(GLKVector3)getMotionVectorWithLowPass{
     // Motion
     CMAttitude *attitude = self.getMotionManager.deviceMotion.attitude;
     if (_referenceAttitude==nil) {
-        // Cache Start Orientation
-        _referenceAttitude = [_motionManager.deviceMotion.attitude copy];
+        // Cache Start Orientation to calibrate the device. Wait for a short time to give MotionManager enough time to initialize
+        [self performSelector:@selector(calibrate) withObject:nil afterDelay:0.25];
+        
     } else {
         // Use start orientation to calibrate
         [attitude multiplyByInverseOfAttitude:_referenceAttitude];
+        NSLog(@"roll: %f", attitude.roll);
     }
     return [self lowPassWithVector: GLKVector3Make(attitude.pitch,attitude.roll,attitude.yaw)];
+}
+
++(void)calibrate {
+    _referenceAttitude = [self.getMotionManager.deviceMotion.attitude copy];
 }
 
 // Stop collection motion data to save energy

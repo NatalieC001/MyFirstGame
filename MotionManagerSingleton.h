@@ -13,6 +13,7 @@
 
 +(GLKVector3)getMotionVectorWithLowPass;
 +(void)stop;
++(void)calibrate;
 
 
 @end
