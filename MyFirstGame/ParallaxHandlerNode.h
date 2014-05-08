@@ -7,12 +7,12 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-#import "MotionManagerSingleton.h" // New
-#import <GLKit/GLKit.h> // New
+#import "MotionManagerSingleton.h"
+#import <GLKit/GLKit.h>
 
 @interface ParallaxHandlerNode : SKNode
 
--(void)addBackgroundLayer:(NSArray*)tiles;
+-(void)addBackgroundLayer:(NSArray*)tiles DirectionY:(int)directionY StepSize:(float)stepSize ScaleFactorX:(float)scaleFactorX ScaleFactorY:(float)scaleFactorY;
 
 -(void)scroll:(float)speed;
 

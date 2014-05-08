@@ -55,10 +55,12 @@ ParallaxHandlerNode *background;
     background = [[ParallaxHandlerNode alloc] initWithSize:self.size];
     [self addChild:background];
     
-    [background addBackgroundLayer:nameBackground];
-    [background addBackgroundLayer:nameBush];
-    [background addBackgroundLayer:nameTree];
-    [background addBackgroundLayer:nameGrass];
+    
+    // Move background which is farest away fastest => Physically not correct, but enough to realize illusion of depths. Otherwise the player is distracted to much by the movements
+    [background addBackgroundLayer:nameBackground DirectionY:-1 StepSize:0.9 ScaleFactorX:1.2 ScaleFactorY:1.09];
+    [background addBackgroundLayer:nameBush DirectionY:1 StepSize:0.7 ScaleFactorX:1.0 ScaleFactorY:1.07];
+    [background addBackgroundLayer:nameTree DirectionY:1 StepSize:0.5 ScaleFactorX:1.0 ScaleFactorY:1.05];
+    [background addBackgroundLayer:nameGrass DirectionY:1 StepSize:0.3 ScaleFactorX:1.0 ScaleFactorY:1.03];
     
 }
 
