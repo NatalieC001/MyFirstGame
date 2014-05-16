@@ -10,6 +10,7 @@
 
 #define cFactorForAngleToGetSpeedX 6
 #define cFactorForAngleToGetSpeedY 1.5
+#define cSpeedY 4 // speed in y direction is independend from horizontal speed
 
 @implementation ParallaxHandlerNode
 
@@ -36,7 +37,7 @@ NSMutableArray* _stepsizes;
     if ([tiles count]==1 ) {
         SKSpriteNode *background=[SKSpriteNode spriteNodeWithImageNamed:(NSString*)[tiles objectAtIndex:0]];
         // Scale size to enable parallax effect
-        background.size=CGSizeMake(background.size.width*scaleFactorX, background.size.height*scaleFactorY);
+        background.size=CGSizeMake(_containerSize.width*scaleFactorX, _containerSize.height*scaleFactorY);
         background.position=CGPointMake(_containerSize.width/2, _containerSize.height/2);
         [self addChild:background];
     } else {
@@ -54,7 +55,7 @@ NSMutableArray* _stepsizes;
                 // Add an emtpy screen
                 tile=[SKSpriteNode spriteNodeWithImageNamed:item];
                 // Scale size to enable parallax effect
-                tile.size=CGSizeMake(tile.size.width, tile.size.height * scaleFactorY);
+                tile.size=CGSizeMake(_containerSize.width, _containerSize.height * scaleFactorY);
                 tile.position=CGPointMake(_containerSize.width/2+(i*_containerSize.width), (_containerSize.width-tile.size.width)/2);
             } else {
                 tile=[[SKSpriteNode alloc] init];
@@ -121,7 +122,7 @@ NSMutableArray* _stepsizes;
         float dStepSize=[[_stepsizes objectAtIndex:i] floatValue]; // Scrolling speed depends on level
         int iDirection=[[_directions objectAtIndex:i] intValue]; // Scroll backgroundimage in another direction to enhance parallax effect
         
-        parallaxPos.y+=speed*dStepSize*dMotionFactorY*iDirection; // Calculate new position
+        parallaxPos.y+=cSpeedY*dStepSize*dMotionFactorY*iDirection; // Calculate new position
         
         // Check if bounds are reached
         if (dMotionFactorY*iDirection>0) {

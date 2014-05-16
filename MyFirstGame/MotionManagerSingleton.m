@@ -47,7 +47,7 @@ static bool bActive;
         [attitude multiplyByInverseOfAttitude:_referenceAttitude];
         NSLog(@"roll: %f", attitude.roll);
     }
-    return [self lowPassWithVector: GLKVector3Make(attitude.pitch,attitude.roll,attitude.yaw)];
+    return [self lowPassWithVector: GLKVector3Make(attitude.yaw,attitude.roll,attitude.pitch)];
 }
 
 +(void)calibrate {
