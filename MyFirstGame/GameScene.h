@@ -11,4 +11,7 @@
 
 @interface GameScene : SKScene
 
+@property int Score;
+@property int Level;
+
 @end

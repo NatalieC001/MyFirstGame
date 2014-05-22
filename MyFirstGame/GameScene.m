@@ -10,37 +10,60 @@
 #import "GameScene.h"
 #import "ParallaxHandlerNode.h"
 
+
+#pragma mark - Private properties, class variables & constants
+
 // Constants
 #define cStartSpeed 5
 #define cMaxSpeed 80
 
+// Private properties
+@interface GameScene ()
+    @property (nonatomic, retain) SKSpriteNode* LifeNode1;
+    @property (nonatomic, retain) SKSpriteNode* LifeNode2;
+    @property (nonatomic, retain) SKSpriteNode* LifeNode3;
+    @property (nonatomic, retain) SKLabelNode* ScoreNode;
+    @property (nonatomic, retain) SKLabelNode* LevelNode;
+    @property (nonatomic) int Lifes;
+@end
+
 @implementation GameScene
 
-
-// private properties
 NSTimeInterval _lastUpdateTime;
 NSTimeInterval _dt;
 int _speed=cStartSpeed;
-
-
 ParallaxHandlerNode *background;
 
+#pragma mark - Init
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
         [self addBackgrounds];
+        [self createHUD];
+        [self addMockUpButtons];
+        
+
         
     }
     return self;
 }
 
-// Increase speed after touch event up to 5 times.
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    if (_speed<cMaxSpeed && _speed>-cMaxSpeed) {
-        _speed=_speed*2;
-    } else {
-        _speed=cStartSpeed;
+    // Get the element which is touched:
+    UITouch *touch = [touches anyObject];
+    CGPoint location = [touch locationInNode:self];
+    SKNode *node = [self nodeAtPoint:location];
+    
+    // Trigger actions
+    if ([node.name isEqualToString:@"PauseButton"]) {
+        [self showPausedDialog];
+    } else if ([node.name isEqualToString:@"lifeLost"]) {
+        [self lifeLost];
+    } else if ([node.name isEqualToString:@"addScore"]) {
+        [self addScore];
     }
 }
+
+
 
 // Add the background elements for parallax scrolling
 -(void)addBackgrounds {
@@ -64,6 +87,104 @@ ParallaxHandlerNode *background;
     
 }
 
+#pragma mark - HUD handling
+
+// Adds the HUD to the scene
+-(void)createHUD {
+    
+    // root node with black background
+    SKSpriteNode* hud = [[SKSpriteNode alloc] initWithColor:[UIColor blackColor] size:CGSizeMake(self.size.width, self.size.height*0.05)];
+    hud.anchorPoint=CGPointMake(0, 0);
+    hud.position = CGPointMake(0, self.size.height-hud.size.height);
+    [self addChild:hud];
+    
+    // remaining/lost lifes
+    self.Lifes=3;
+    self.LifeNode1 = [[SKSpriteNode alloc] initWithImageNamed:@"HUD_Ball"];
+    self.LifeNode1.position=CGPointMake(self.LifeNode1.size.width, hud.size.height/2);
+    [hud addChild:self.LifeNode1];
+    self.LifeNode2 = [[SKSpriteNode alloc] initWithImageNamed:@"HUD_Ball"];
+    self.LifeNode2.position=CGPointMake(self.LifeNode2.size.width*2.5, hud.size.height/2);
+    [hud addChild:self.LifeNode2];
+    self.LifeNode3 = [[SKSpriteNode alloc] initWithImageNamed:@"HUD_Ball"];
+    self.LifeNode3.position=CGPointMake(self.LifeNode3.size.width*4, hud.size.height/2);
+    [hud addChild:self.LifeNode3];
+    
+    // current level
+    self.Level=1;
+    self.LevelNode = [[SKLabelNode alloc] init];
+    self.LevelNode.position = CGPointMake(hud.size.width/2, 1);
+    self.LevelNode.text=@"Level 1";
+    self.LevelNode.fontSize=hud.size.height;
+    [hud addChild:self.LevelNode];
+    
+    // pause button
+    SKLabelNode* pauseButton = [[SKLabelNode alloc] init];
+    pauseButton.position = CGPointMake(hud.size.width/1.5, 1);
+    pauseButton.text=@"II";
+    pauseButton.fontSize=hud.size.height;
+    pauseButton.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeCenter;
+    pauseButton.name=@"PauseButton";
+    [hud addChild:pauseButton];
+    
+    // score
+    self.Score=0;
+    self.ScoreNode = [[SKLabelNode alloc] init];
+    self.ScoreNode.position = CGPointMake(hud.size.width-hud.size.width*.1, 1);
+    self.ScoreNode.text=@"0";
+    self.ScoreNode.fontSize=hud.size.height;
+    [hud addChild:self.ScoreNode];
+
+}
+
+-(void)addMockUpButtons {
+
+    SKSpriteNode* lifeLost = [[SKSpriteNode alloc] initWithColor:[UIColor redColor] size:CGSizeMake(self.size.width/3, self.size.height*0.1)];
+    lifeLost.name=@"lifeLost";
+    lifeLost.position=CGPointMake(self.size.width/2, lifeLost.size.height);
+    [self addChild:lifeLost];
+    
+    SKSpriteNode* addScore = [[SKSpriteNode alloc] initWithColor:[UIColor greenColor] size:CGSizeMake(self.size.width/3, self.size.height*0.1)];
+    addScore.name=@"addScore";
+    addScore.position=CGPointMake(self.size.width/2, lifeLost.size.height*3);
+    [self addChild:addScore];
+}
+
+-(void)addScore {
+    self.Score+=100;
+    self.ScoreNode.text=[NSString stringWithFormat:@"%d",self.Score];
+}
+
+-(void)lifeLost {
+    if (_Lifes==1) {
+        self.LifeNode3.texture = [SKTexture textureWithImageNamed:@"HUD_Ball_crossed"];
+        [self showGameOverAlert];
+    } else {
+        if (self.Lifes==2) {
+            self.LifeNode2.texture = [SKTexture textureWithImageNamed:@"HUD_Ball_crossed"];
+        } else if (self.Lifes==3) {
+            self.LifeNode1.texture = [SKTexture textureWithImageNamed:@"HUD_Ball_crossed"];
+        }
+    }
+    self.Lifes--;
+}
+
+-(void)showPausedDialog {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Paused" message:@"" delegate:self cancelButtonTitle:@"Continue" otherButtonTitles:@"Finish!", nil, nil];
+    alert.tag=1;
+    [alert show];
+}
+
+// show GameOver Alert
+-(void)showGameOverAlert {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Game Over" message:@"" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil, nil];
+    alert.tag=2;
+    [alert show];
+}
+
+
+#pragma mark - GameLoop
+
 // The GameLoop
 -(void)update:(NSTimeInterval)currentTime {
      
@@ -77,7 +198,6 @@ ParallaxHandlerNode *background;
     
     // Scroll
     [background scroll:_speed*_dt];
-
 }
 
 @end
