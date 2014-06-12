@@ -11,13 +11,7 @@
 #import "ParallaxHandlerNode.h"
 
 
-#pragma mark - Private properties, class variables & constants
-
-// Constants
-#define cStartSpeed 5
-#define cMaxSpeed 80
-
-// Private properties
+#pragma mark - Private properties
 @interface GameScene ()
     @property (nonatomic, retain) SKSpriteNode* LifeNode1;
     @property (nonatomic, retain) SKSpriteNode* LifeNode2;
@@ -26,6 +20,13 @@
     @property (nonatomic, retain) SKLabelNode* LevelNode;
     @property (nonatomic) int Lifes;
 @end
+
+
+#pragma mark - Constants
+
+// Constants
+#define cStartSpeed 5
+#define cMaxSpeed 80
 
 @implementation GameScene
 
@@ -40,32 +41,12 @@ ParallaxHandlerNode *background;
         [self addBackgrounds];
         [self createHUD];
         [self addMockUpButtons];
-        
-
-        
     }
     return self;
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    // Get the element which is touched:
-    UITouch *touch = [touches anyObject];
-    CGPoint location = [touch locationInNode:self];
-    SKNode *node = [self nodeAtPoint:location];
-    
-    // Trigger actions
-    if ([node.name isEqualToString:@"PauseButton"]) {
-        [self showPausedDialog];
-    } else if ([node.name isEqualToString:@"lifeLost"]) {
-        [self lifeLost];
-    } else if ([node.name isEqualToString:@"addScore"]) {
-        [self addScore];
-    }
-}
 
-
-
-// Add the background elements for parallax scrolling
+/// Add the background elements for parallax scrolling
 -(void)addBackgrounds {
     
     // Array contains the name of the background tiles. "" for adding an empty screen
@@ -89,7 +70,7 @@ ParallaxHandlerNode *background;
 
 #pragma mark - HUD handling
 
-// Adds the HUD to the scene
+/// Adds the HUD to the scene
 -(void)createHUD {
     
     // root node with black background
@@ -137,6 +118,7 @@ ParallaxHandlerNode *background;
 
 }
 
+/// Temporary added buttons to simulate player events like score or life lost
 -(void)addMockUpButtons {
 
     SKSpriteNode* lifeLost = [[SKSpriteNode alloc] initWithColor:[UIColor redColor] size:CGSizeMake(self.size.width/3, self.size.height*0.1)];
@@ -148,6 +130,22 @@ ParallaxHandlerNode *background;
     addScore.name=@"addScore";
     addScore.position=CGPointMake(self.size.width/2, lifeLost.size.height*3);
     [self addChild:addScore];
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    // Get the element which is touched:
+    UITouch *touch = [touches anyObject];
+    CGPoint location = [touch locationInNode:self];
+    SKNode *node = [self nodeAtPoint:location];
+    
+    // Trigger actions
+    if ([node.name isEqualToString:@"PauseButton"]) {
+        [self showPausedDialog];
+    } else if ([node.name isEqualToString:@"lifeLost"]) {
+        [self lifeLost];
+    } else if ([node.name isEqualToString:@"addScore"]) {
+        [self addScore];
+    }
 }
 
 -(void)addScore {
@@ -180,6 +178,20 @@ ParallaxHandlerNode *background;
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Game Over" message:@"" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil, nil];
     alert.tag=2;
     [alert show];
+}
+
+// React on Alert
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (alertView.tag==1) {
+        if (buttonIndex==1) {
+            // Notify Delegate
+            [self.delegateContainerViewController gameStop];
+        }
+    } else if (alertView.tag==2) {
+        // Notify Delegate
+        [self.delegateContainerViewController gameOver];
+    }
 }
 
 

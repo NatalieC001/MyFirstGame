@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GameScene.h"
 
-@interface GameViewController : UIViewController
+
+
+@interface GameViewController : UIViewController <GameSceneDelegate>
 
     @property (weak, nonatomic) IBOutlet UIImageView *backgroundView;
     @property (strong, nonatomic) IBOutletCollection(UIView) NSArray *foregroundViews;

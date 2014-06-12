@@ -47,12 +47,21 @@
     
     // Present the scene.
     [skView presentScene:gameScene];
+    gameScene.delegateContainerViewController=self;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+-(void) gameStop {
+    [self performSegueWithIdentifier: @"BackToStart" sender: self];
+}
+-(void) gameOver {
+    [self performSegueWithIdentifier: @"AddHighScore" sender: self];
 }
 
 @end

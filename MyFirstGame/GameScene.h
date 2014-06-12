@@ -8,10 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol GameSceneDelegate <NSObject>
+
+@required
+-(void) gameStop;
+-(void) gameOver;
+
+@end
 
 @interface GameScene : SKScene
 
 @property int Score;
 @property int Level;
+
+
+@property (nonatomic,strong)  id<GameSceneDelegate> delegateContainerViewController;
 
 @end
