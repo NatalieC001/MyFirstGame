@@ -7,6 +7,12 @@ http://stefansdevplayground.blogspot.de
 
 The videos are available in my YouTube channel: https://www.youtube.com/channel/UCwC_QHjZ-COEQpLVAjaDyfQ
 
+![ScreenShot](http://2.bp.blogspot.com/-59dSA1_EjBk/U8EqzOT-b2I/AAAAAAAAAU4/5AUT-lMMwl4/s1600/Bildschirmfoto+2014-07-12+um+14.31.29.png)
+
+
+License
+=======
+
 This code is published under the MIT licence: http://opensource.org/licenses/MIT
 
 The MIT License (MIT)
