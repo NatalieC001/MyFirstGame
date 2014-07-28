@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2C039F4018B40F5F004C2DC7 /* UITools.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C039F3F18B40F5F004C2DC7 /* UITools.m */; };
-		2C1867B118F31F3700A75302 /* MotionManagerSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1867B018F31F3700A75302 /* MotionManagerSingleton.m */; };
 		2C2993C518E03C8900CE4900 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2993C418E03C8900CE4900 /* SpriteKit.framework */; };
 		2C2993C818E0472C00CE4900 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2993C718E0472C00CE4900 /* GameScene.m */; };
 		2C2993CB18E048A700CE4900 /* ParallaxHandlerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2993CA18E048A700CE4900 /* ParallaxHandlerNode.m */; };
@@ -18,6 +17,7 @@
 		2C4B6AB418B54F7400570BC6 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B6AB318B54F7400570BC6 /* GameViewController.m */; };
 		2C4B6AB718B54F8900570BC6 /* AddHighscoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B6AB618B54F8900570BC6 /* AddHighscoreViewController.m */; };
 		2C4B6ABA18B54F9E00570BC6 /* HighscoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C4B6AB918B54F9E00570BC6 /* HighscoreViewController.m */; };
+		2C4D3C741986B26F00ED6553 /* MotionManagerSingletonSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D3C731986B26F00ED6553 /* MotionManagerSingletonSwift.swift */; };
 		2C86800118F0B5AB004464A7 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C86800018F0B5AB004464A7 /* CoreMotion.framework */; };
 		2C86800318F0B5BA004464A7 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C86800218F0B5BA004464A7 /* GLKit.framework */; };
 		2C9DC6171971643C00EC9AEA /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2C9DC6161971643C00EC9AEA /* License.txt */; };
@@ -50,8 +50,6 @@
 /* Begin PBXFileReference section */
 		2C039F3E18B40F5F004C2DC7 /* UITools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITools.h; sourceTree = "<group>"; };
 		2C039F3F18B40F5F004C2DC7 /* UITools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITools.m; sourceTree = "<group>"; };
-		2C1867B018F31F3700A75302 /* MotionManagerSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotionManagerSingleton.m; sourceTree = "<group>"; };
-		2C1867B318F3239E00A75302 /* MotionManagerSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MotionManagerSingleton.h; path = ../MotionManagerSingleton.h; sourceTree = "<group>"; };
 		2C2613E218C683D700BE857F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		2C2613E318C6841900BE857F /* SplashiPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashiPad.png; sourceTree = "<group>"; };
 		2C2613E418C6842D00BE857F /* SplashiPad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SplashiPad@2x.png"; sourceTree = "<group>"; };
@@ -73,6 +71,8 @@
 		2C4B6AB618B54F8900570BC6 /* AddHighscoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddHighscoreViewController.m; sourceTree = "<group>"; };
 		2C4B6AB818B54F9E00570BC6 /* HighscoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighscoreViewController.h; sourceTree = "<group>"; };
 		2C4B6AB918B54F9E00570BC6 /* HighscoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighscoreViewController.m; sourceTree = "<group>"; };
+		2C4D3C721986B26E00ED6553 /* MyFirstGame-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyFirstGame-Bridging-Header.h"; sourceTree = "<group>"; };
+		2C4D3C731986B26F00ED6553 /* MotionManagerSingletonSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionManagerSingletonSwift.swift; sourceTree = "<group>"; };
 		2C86800018F0B5AB004464A7 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		2C86800218F0B5BA004464A7 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		2C9DC6161971643C00EC9AEA /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
@@ -198,16 +198,16 @@
 				2C2993C618E0472C00CE4900 /* GameScene.h */,
 				2C2993C718E0472C00CE4900 /* GameScene.m */,
 				2CB30DD818A8E87100609327 /* AppDelegate.m */,
-				2C2993CA18E048A700CE4900 /* ParallaxHandlerNode.m */,
-				2C1867B318F3239E00A75302 /* MotionManagerSingleton.h */,
-				2C1867B018F31F3700A75302 /* MotionManagerSingleton.m */,
+				2C4D3C731986B26F00ED6553 /* MotionManagerSingletonSwift.swift */,
 				2C2993C918E048A700CE4900 /* ParallaxHandlerNode.h */,
+				2C2993CA18E048A700CE4900 /* ParallaxHandlerNode.m */,
 				2CB30DDA18A8E87100609327 /* Main_iPhone.storyboard */,
 				2CB30DDD18A8E87100609327 /* Main_iPad.storyboard */,
 				2C039F3E18B40F5F004C2DC7 /* UITools.h */,
 				2C039F3F18B40F5F004C2DC7 /* UITools.m */,
 				2CB30DE318A8E87100609327 /* Images.xcassets */,
 				2CB30DCF18A8E87100609327 /* Supporting Files */,
+				2C4D3C721986B26E00ED6553 /* MyFirstGame-Bridging-Header.h */,
 			);
 			path = MyFirstGame;
 			sourceTree = "<group>";
@@ -328,13 +328,13 @@
 				2C2993C818E0472C00CE4900 /* GameScene.m in Sources */,
 				2C4B6AB418B54F7400570BC6 /* GameViewController.m in Sources */,
 				2C4B6ABA18B54F9E00570BC6 /* HighscoreViewController.m in Sources */,
+				2C4D3C741986B26F00ED6553 /* MotionManagerSingletonSwift.swift in Sources */,
 				2C4B6AB718B54F8900570BC6 /* AddHighscoreViewController.m in Sources */,
 				2CB30DD518A8E87100609327 /* main.m in Sources */,
 				2C4B6AB118B54F6400570BC6 /* SettingsViewController.m in Sources */,
 				2C2993CB18E048A700CE4900 /* ParallaxHandlerNode.m in Sources */,
 				2CB30E0218A8EB2500609327 /* StartScreenViewController.m in Sources */,
 				2C039F4018B40F5F004C2DC7 /* UITools.m in Sources */,
-				2C1867B118F31F3700A75302 /* MotionManagerSingleton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,11 +459,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyFirstGame/MyFirstGame-Prefix.pch";
 				INFOPLIST_FILE = "MyFirstGame/MyFirstGame-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyFirstGame/MyFirstGame-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -473,11 +477,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyFirstGame/MyFirstGame-Prefix.pch";
 				INFOPLIST_FILE = "MyFirstGame/MyFirstGame-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MyFirstGame/MyFirstGame-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
