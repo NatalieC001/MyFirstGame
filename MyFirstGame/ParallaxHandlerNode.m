@@ -7,6 +7,7 @@
 //
 
 #import "ParallaxHandlerNode.h"
+#import <myFirstGame-Swift.h>
 
 #define cFactorForAngleToGetSpeedX 6
 #define cFactorForAngleToGetSpeedY 1.5
@@ -75,9 +76,12 @@ NSMutableArray* _stepsizes;
 // - Speed depends on layer to simulate deepth
 -(void)scroll:(float)speed {
     
-    GLKVector3 vMotionVector = [MotionManagerSingleton getMotionVectorWithLowPass];
-    float dMotionFactorX=vMotionVector.x*cFactorForAngleToGetSpeedX;
-    float dMotionFactorY=vMotionVector.y*cFactorForAngleToGetSpeedY;
+    //GLKVector3 vMotionVector = [MotionManagerSingleton getMotionVectorWithLowPass];
+    
+    NSArray *motionArray  = [MotionManagerSingletonSwift getMotionVectorWithLowPass];
+    
+    float dMotionFactorX=((NSNumber *)[motionArray objectAtIndex:0]).floatValue*cFactorForAngleToGetSpeedX;
+    float dMotionFactorY=((NSNumber *)[motionArray objectAtIndex:1]).floatValue*cFactorForAngleToGetSpeedY;
     
     CGPoint parallaxPos;
     
