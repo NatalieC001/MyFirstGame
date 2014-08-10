@@ -27,8 +27,7 @@
 		2CB30DD318A8E87100609327 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CB30DD118A8E87100609327 /* InfoPlist.strings */; };
 		2CB30DD518A8E87100609327 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB30DD418A8E87100609327 /* main.m */; };
 		2CB30DD918A8E87100609327 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB30DD818A8E87100609327 /* AppDelegate.m */; };
-		2CB30DDC18A8E87100609327 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB30DDA18A8E87100609327 /* Main_iPhone.storyboard */; };
-		2CB30DDF18A8E87100609327 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB30DDD18A8E87100609327 /* Main_iPad.storyboard */; };
+		2CB30DDC18A8E87100609327 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CB30DDA18A8E87100609327 /* Main.storyboard */; };
 		2CB30DE418A8E87100609327 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CB30DE318A8E87100609327 /* Images.xcassets */; };
 		2CB30DEB18A8E87100609327 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB30DEA18A8E87100609327 /* XCTest.framework */; };
 		2CB30DEC18A8E87100609327 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CB30DC818A8E87000609327 /* Foundation.framework */; };
@@ -86,8 +85,7 @@
 		2CB30DD618A8E87100609327 /* MyFirstGame-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MyFirstGame-Prefix.pch"; sourceTree = "<group>"; };
 		2CB30DD718A8E87100609327 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2CB30DD818A8E87100609327 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2CB30DDB18A8E87100609327 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		2CB30DDE18A8E87100609327 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		2CB30DDB18A8E87100609327 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2CB30DE318A8E87100609327 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2CB30DE918A8E87100609327 /* MyFirstGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyFirstGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CB30DEA18A8E87100609327 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -201,8 +199,7 @@
 				2C4D3C731986B26F00ED6553 /* MotionManagerSingletonSwift.swift */,
 				2C2993C918E048A700CE4900 /* ParallaxHandlerNode.h */,
 				2C2993CA18E048A700CE4900 /* ParallaxHandlerNode.m */,
-				2CB30DDA18A8E87100609327 /* Main_iPhone.storyboard */,
-				2CB30DDD18A8E87100609327 /* Main_iPad.storyboard */,
+				2CB30DDA18A8E87100609327 /* Main.storyboard */,
 				2C039F3E18B40F5F004C2DC7 /* UITools.h */,
 				2C039F3F18B40F5F004C2DC7 /* UITools.m */,
 				2CB30DE318A8E87100609327 /* Images.xcassets */,
@@ -270,6 +267,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Stefan;
 				TargetAttributes = {
+					2CB30DC418A8E87000609327 = {
+						DevelopmentTeam = XU67R53NEB;
+					};
 					2CB30DE818A8E87100609327 = {
 						TestTargetID = 2CB30DC418A8E87000609327;
 					};
@@ -299,9 +299,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CB30DDF18A8E87100609327 /* Main_iPad.storyboard in Resources */,
 				2CB30DE418A8E87100609327 /* Images.xcassets in Resources */,
-				2CB30DDC18A8E87100609327 /* Main_iPhone.storyboard in Resources */,
+				2CB30DDC18A8E87100609327 /* Main.storyboard in Resources */,
 				2CB30DD318A8E87100609327 /* InfoPlist.strings in Resources */,
 				2CB30E0418A9098700609327 /* back11.jpg in Resources */,
 				2C9DC6171971643C00EC9AEA /* License.txt in Resources */,
@@ -364,20 +363,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		2CB30DDA18A8E87100609327 /* Main_iPhone.storyboard */ = {
+		2CB30DDA18A8E87100609327 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2CB30DDB18A8E87100609327 /* Base */,
 			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		2CB30DDD18A8E87100609327 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2CB30DDE18A8E87100609327 /* Base */,
-			);
-			name = Main_iPad.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -460,12 +451,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyFirstGame/MyFirstGame-Prefix.pch";
 				INFOPLIST_FILE = "MyFirstGame/MyFirstGame-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyFirstGame/MyFirstGame-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -478,12 +472,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MyFirstGame/MyFirstGame-Prefix.pch";
 				INFOPLIST_FILE = "MyFirstGame/MyFirstGame-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MyFirstGame/MyFirstGame-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
