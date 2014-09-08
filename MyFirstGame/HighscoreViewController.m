@@ -20,6 +20,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+    [UITools assignBackgroundParallaxBehavior:self.backgroundView];
     }
     return self;
 }
@@ -27,9 +28,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    // Do any additional setup after loading the view.
+    
+}
+
+-(void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
     [UITools assignBackgroundParallaxBehavior:self.backgroundView];
     [UITools assignForegroundParallaxBehavior:self.foregroundViews];
+    
 }
 
 - (void)didReceiveMemoryWarning

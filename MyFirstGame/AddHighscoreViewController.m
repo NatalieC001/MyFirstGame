@@ -28,8 +28,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+}
+
+-(void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
     [UITools assignBackgroundParallaxBehavior:self.backgroundView];
     [UITools assignForegroundParallaxBehavior:self.foregroundViews];
+    
 }
 
 - (void)didReceiveMemoryWarning
