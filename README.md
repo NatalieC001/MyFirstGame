@@ -1,9 +1,11 @@
 MyFirstGame
 ===========
 
-Sample code related to my blog
+Sample code related to my blog:
 
 http://stefansdevplayground.blogspot.de
+
+Prerequisite is XCode 6. Currently this code does not run in XCode 6.1!
 
 The videos are available in my YouTube channel: https://www.youtube.com/channel/UCwC_QHjZ-COEQpLVAjaDyfQ
 
