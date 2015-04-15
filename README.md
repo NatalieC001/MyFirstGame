@@ -3,7 +3,7 @@ MyFirstGame
 
 Sample code related to my blog:
 
-http://stefansdevplayground.blogspot.de
+http://developerplayground.net/?p=29
 
 Prerequisite is XCode 6. Currently this code does not run in XCode 6.1!
 
